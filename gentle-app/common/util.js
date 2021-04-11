@@ -1,7 +1,7 @@
 var gentleUtil = Object.create(null);
 
 // 슬라이드팝업 세팅 
-gentleUtil.slidePopupInit = function(){
+gentleUtil.slidePopupInit = function () {
     this.$bot = $("#bot");
     this.$bot.append($('<div id = "slide-popup">\
     <header>\
@@ -17,24 +17,24 @@ gentleUtil.slidePopupInit = function(){
 
 
 // 슬라이드 팝업 오픈
-gentleUtil.slidePopupOpen = function(html){
-        var $slidePopup = $("#bot").find("#slide-popup");
+gentleUtil.slidePopupOpen = function (html) {
+    var $slidePopup = $("#bot").find("#slide-popup");
 
-        //if(html !== undefined){
-            $slidePopup.find("#slide-popup-content").html(html);
-        //}
-        //$slidePopup.css('top',0);
+    //if(html !== undefined){
+    $slidePopup.find("#slide-popup-content").html(html);
+    //}
+    //$slidePopup.css('top',0);
 
-        var botHeight = $("#bot").outerHeight();
-        var popupHeight = $slidePopup.outerHeight();
+    var botHeight = $("#bot").outerHeight();
+    var popupHeight = $slidePopup.outerHeight();
 
-        $slidePopup.css('top', (botHeight - popupHeight) + 'px');
+    $slidePopup.css('top', (botHeight - popupHeight) + 'px');
 
-        //console.log($slidePopup.outerHeight());
-    }
+    //console.log($slidePopup.outerHeight());
+}
 
-    gentleUtil.slidePopupClose = function(){
-        this.$slidePopup.css('top','100%');
-    }
+gentleUtil.slidePopupClose = function () {
+    this.$slidePopup.css('top', '100%');
+}
 
-    export default gentleUtil;
+export default gentleUtil;

@@ -4,19 +4,16 @@
  * Date: 2021-04-03
  */
 
-
 import GentleWidget from '../common/widget';
 import gentleUtil from '../common/util';
 import GentleApi from '../common/api';
-
 import GentleComponentButton from '../component/button';
 import GentleComponentBubble from '../component/bubble';
-
 
 var GentleServiceInviteMember = Object.create( GentleWidget )
 
 
-// 회원초대방식 선택
+// 회원초대방식 선택 
 GentleServiceInviteMember.selectInviteType = function(){
     
 
@@ -27,7 +24,6 @@ GentleServiceInviteMember.selectInviteType = function(){
             "user": "bot"
     });
    
-    //console.log(bubble.$elem.html());
 
     // 버튼
     var button = Object.create( GentleComponentButton );
@@ -73,7 +69,9 @@ GentleServiceInviteMember.sponserIsOther = function(){
            "html": "후원인으로 설정할 회원을 선택하세요",
            "user": "bot"
    });
-   
+   bubble.insert();
+
+
    // 버튼
    var button = Object.create( GentleComponentButton );
    button.createComponent([
@@ -89,9 +87,6 @@ GentleServiceInviteMember.sponserIsOther = function(){
            }
        }
    ]);
-
-
-   bubble.insert();
    button.insert();
 
 }
@@ -101,10 +96,6 @@ GentleServiceInviteMember.createSimpleMemberRegister = function(){
 
     if( this.sponserName === undefined ) throw new Error('후원인 이름이 전달되지 않았습니다');
     if( this.sponserId === undefined ) throw new Error('후원인 ID가 전달되지 않았습니다');
-
-
-    // 페이지 인터렉션 함수가 추가될 예정 
-    // GentleHeler.nextPage() 
 
     // 버블 
     var bubble = Object.create( GentleComponentBubble );   
@@ -124,8 +115,6 @@ GentleServiceInviteMember.createSimpleMemberRegister = function(){
 
     // 정상적으로 생성됬으면 컴포넌트 출력 
     bubble.insert();
-
-    // 초대장 생성안됬으면 안내 
 }
 
 
