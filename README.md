@@ -27,9 +27,9 @@ Layer내부의 모듈들을 분리하고 webpack을 이용해서 번들파일 �
   - InviteMemver : 회원초대 서비스 
 
 
-### Layer 계층 및 모듈의 물리경로 
-- gentle-app : Layer 계층 및 모듈 집합 
-- gentle-dist : WebPack 번들파일 생성경로 
+### 폴더설명
+- gentle-app : Layer 계층 및 모듈 집합 ( webpack source )
+- gentle-dist : WebPack 번들파일 생성경로 ( webpack destination )
 
 
 ### 사용방법 
