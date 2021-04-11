@@ -5,7 +5,7 @@
  */
 
 import GentleWidget from '../common/widget';
-import gentleUtil from '../common/util';
+import GentleUtil from '../common/util';
 import GentleApi from '../common/api';
 import GentleComponentButton from '../component/button';
 import GentleComponentBubble from '../component/bubble';
@@ -82,7 +82,7 @@ GentleServiceInviteMember.sponserIsOther = function(){
            "onClick": function(){
                // 슬라이드 팝업 컨텐츠 생성 
                var html = '후원인 검색하기';
-               gentleUtil.slidePopupOpen(html);
+               GentleUtil.slidePopupOpen(html);
 
            }
        }

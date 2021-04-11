@@ -173,13 +173,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
 var GentleServiceInviteMember = Object.create( _common_widget__WEBPACK_IMPORTED_MODULE_0__.default )
 
 
-// 회원초대방식 선택
+// 회원초대방식 선택 
 GentleServiceInviteMember.selectInviteType = function(){
     
 
@@ -190,7 +187,6 @@ GentleServiceInviteMember.selectInviteType = function(){
             "user": "bot"
     });
    
-    //console.log(bubble.$elem.html());
 
     // 버튼
     var button = Object.create( _component_button__WEBPACK_IMPORTED_MODULE_3__.default );
@@ -236,7 +232,9 @@ GentleServiceInviteMember.sponserIsOther = function(){
            "html": "후원인으로 설정할 회원을 선택하세요",
            "user": "bot"
    });
-   
+   bubble.insert();
+
+
    // 버튼
    var button = Object.create( _component_button__WEBPACK_IMPORTED_MODULE_3__.default );
    button.createComponent([
@@ -252,9 +250,6 @@ GentleServiceInviteMember.sponserIsOther = function(){
            }
        }
    ]);
-
-
-   bubble.insert();
    button.insert();
 
 }
@@ -264,10 +259,6 @@ GentleServiceInviteMember.createSimpleMemberRegister = function(){
 
     if( this.sponserName === undefined ) throw new Error('후원인 이름이 전달되지 않았습니다');
     if( this.sponserId === undefined ) throw new Error('후원인 ID가 전달되지 않았습니다');
-
-
-    // 페이지 인터렉션 함수가 추가될 예정 
-    // GentleHeler.nextPage() 
 
     // 버블 
     var bubble = Object.create( _component_bubble__WEBPACK_IMPORTED_MODULE_4__.default );   
@@ -287,8 +278,6 @@ GentleServiceInviteMember.createSimpleMemberRegister = function(){
 
     // 정상적으로 생성됬으면 컴포넌트 출력 
     bubble.insert();
-
-    // 초대장 생성안됬으면 안내 
 }
 
 
@@ -397,9 +386,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var gentleUtil = Object.create(null); // 슬라이드팝업 세팅 
+var GentleUtil = Object.create(null); // 슬라이드팝업 세팅 
 
-gentleUtil.slidePopupInit = function () {
+GentleUtil.slidePopupInit = function () {
   this.$bot = $("#bot");
   this.$bot.append($('<div id = "slide-popup">\
     <header>\
@@ -412,7 +401,7 @@ gentleUtil.slidePopupInit = function () {
 }; // 슬라이드 팝업 오픈
 
 
-gentleUtil.slidePopupOpen = function (html) {
+GentleUtil.slidePopupOpen = function (html) {
   var $slidePopup = $("#bot").find("#slide-popup"); //if(html !== undefined){
 
   $slidePopup.find("#slide-popup-content").html(html); //}
@@ -423,11 +412,11 @@ gentleUtil.slidePopupOpen = function (html) {
   $slidePopup.css('top', botHeight - popupHeight + 'px'); //console.log($slidePopup.outerHeight());
 };
 
-gentleUtil.slidePopupClose = function () {
+GentleUtil.slidePopupClose = function () {
   this.$slidePopup.css('top', '100%');
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (gentleUtil);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GentleUtil);
 
 /***/ }),
 

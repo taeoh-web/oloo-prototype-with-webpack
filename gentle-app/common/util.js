@@ -1,7 +1,7 @@
-var gentleUtil = Object.create(null);
+var GentleUtil = Object.create(null);
 
 // 슬라이드팝업 세팅 
-gentleUtil.slidePopupInit = function () {
+GentleUtil.slidePopupInit = function () {
     this.$bot = $("#bot");
     this.$bot.append($('<div id = "slide-popup">\
     <header>\
@@ -17,7 +17,7 @@ gentleUtil.slidePopupInit = function () {
 
 
 // 슬라이드 팝업 오픈
-gentleUtil.slidePopupOpen = function (html) {
+GentleUtil.slidePopupOpen = function (html) {
     var $slidePopup = $("#bot").find("#slide-popup");
 
     //if(html !== undefined){
@@ -33,8 +33,8 @@ gentleUtil.slidePopupOpen = function (html) {
     //console.log($slidePopup.outerHeight());
 }
 
-gentleUtil.slidePopupClose = function () {
+GentleUtil.slidePopupClose = function () {
     this.$slidePopup.css('top', '100%');
 }
 
-export default gentleUtil;
+export default GentleUtil;
