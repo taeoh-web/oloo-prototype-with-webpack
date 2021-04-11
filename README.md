@@ -14,7 +14,8 @@ Layer내부의 모듈들을 분리하고 webpack을 이용해서 번들파일 �
 프로토타입에서는 챗봇에서 회원초대 서비스를 개발한다고 가정하겠습니다    
 이 패턴으로 지속적으로 서비스를 확장합니다 
 
-- Common Layer : 공통기능 계층  
+### Layer 계층 및 모듈 
+- Common Layer : 공통기능 계층 
   - API Module : API 통신담당 
   - Util Module : 유틸리티 모음 
   - Widget Module : 컴포넌트의 공통 작업담당 
@@ -25,3 +26,16 @@ Layer내부의 모듈들을 분리하고 webpack을 이용해서 번들파일 �
 - Service Layer 
   - InviteMemver : 회원초대 서비스 
 
+
+### Layer 계층 및 모듈의 물리경로 
+- gentle-app : Layer 계층 및 모듈 집합 
+- gentle-dist : WebPack 번들파일 생성경로 
+
+
+### 사용방법 
+<code>
+<pre>
+npm install
+npm run build
+</pre>
+</code>
