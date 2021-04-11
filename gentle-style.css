@@ -1,0 +1,13 @@
+html{font-size:12px}
+        #bot{overflow:hidden; position:relative; padding:20px; display: block; width:343px; height: 548px; margin:0 auto; background-color: #f3f3f3;}
+        #bot .bubble-container{overflow:hidden;}
+        #bot .bubble{display: block; max-width:60%; padding:10px; background-color: #fff; border-radius: 13px;margin-bottom:10px}
+        #bot .bubble.bot{float:left; clear:both;}
+        #bot .bubble.user{float:right; clear: both; margin:20px 0 30px 0}
+        #bot .button-container{overflow:hidden}
+        #bot .button-container button{width:100%; margin-bottom:10px; padding:10px 10px;}
+
+        #bot #slide-popup{box-sizing:border-box; padding:20px; z-index:999; position:absolute; width:100%; height:auto; background-color: #dedede; 
+        left:0; top:100%;}
+        #bot #slide-popup-close{position:absolute; top:20px; right:20px; cursor: pointer;}
+        #bot #slide-popup-content{outline:1px solid #111}
