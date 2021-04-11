@@ -34,8 +34,6 @@ Layer내부의 모듈들을 분리하고 webpack을 이용해서 번들파일 �
 
 ### 사용방법 
 <code>
-<pre>
 npm install
 npm run build
-</pre>
 </code>
